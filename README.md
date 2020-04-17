@@ -1,10 +1,10 @@
-#UrlShortner
+# UrlShortner
 
 A Url-Shortening API service built using flask micro web framework written in Python and deployed on WSGI server.
 
-##Getting started
+## Getting started
 
-###Prerequisites
+### Prerequisites
 
 - Download Docker engine
 - Pull the official mysql:5.7 image from docker h
@@ -29,7 +29,7 @@ $ systemctl start docker
 ```sh
 $ docker pull mysql:5.7
 ```
-###Setting Up the Environment
+### Setting Up the Environment
 
 - Create a volume 
 
@@ -53,7 +53,7 @@ $ docker inspect dbos
 
 - Now go to the app.py file and change the Ip adress in the connection
 
-##Deployment
+## Deployment
 
 - Build the image
 
