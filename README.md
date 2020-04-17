@@ -11,9 +11,7 @@ A Url-Shortening API service built using flask micro web framework written in Py
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+A step by step to get a env running
 
 ```sh
 $ yum install docker-ce
