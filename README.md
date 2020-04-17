@@ -7,7 +7,7 @@ A Url-Shortening API service built using flask micro web framework written in Py
 ### Prerequisites
 
 - Download Docker engine
-- Pull the official mysql:5.7 image from docker h
+- Pull the official mysql:5.7 image from docker hub
 
 ### Installing
 
