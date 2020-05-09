@@ -6,77 +6,23 @@ A Url-Shortening API service built using flask micro web framework written in Py
 
 ### Prerequisites
 
-- Download Docker engine
-- Pull the official mysql:5.7 image from docker hub
+- A Docker engine + Docker Compose
 
 ### Installing
-
-A step by step to get a env running
-
+- Clone the repository
 ```sh
-$ yum install docker-ce
+git clone <URL>
 ```
-- Activate Docker services using
 
+- Change the password and other environmental values if required
+
+- Change present working directory to cloned repository
+
+ ```sh
+ cd Url-Shortner
+ ```
+
+-   provision the infrastructure
 ```sh
-$ systemctl start docker
+docker-compose up -d
 ```
-
-- Pull the MySQL image using
-
-```sh
-$ docker pull mysql:5.7
-```
-### Setting Up the Environment
-
-- Create a volume 
-
-```sh
-$ docker volume create mydbstorage
-```
-
-- Run the MySQL Server
-
-```sh
-$ docker run -dit -e MYSQL_ROOT_PASSWORD=redhat -e MYSQL_USER=root
-                -e MYSQL_PASSWORD=redhat      -e MYSQL_DATABASE=mydatabase
-		-v mydbstorage:/var/lib/mysql --name dbos mysql:5.7
-```
-
-- Check the ip address of the database container 
-
-```sh
-$ docker inspect dbos
-```
-
-- Now go to the app.py file and change the Ip adress in the connection
-
-## Deployment
-
-- Build the image
-
-```sh 
-$ docker build --tag url-shortner:v1 .
-```
-
-- Run the image
-
-```sh
-$ docker run --name flaskapp -p 5000:5000 url-shortner:v1
-```
-
-## Running the tests
-
-Open the web browser and access to the page 
-
-```
-http://0.0.0.0:5000
-```
-- Enter the url to be shortened 
-- Copy and paste the url in the address location when required to fetch the original url 
-
-
-
-
-
-
