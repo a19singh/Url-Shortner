@@ -32,7 +32,7 @@ def base10(url):
 def dbTable():
 
     mydb = mysql.connector.connect(
-            host = "172.17.0.2",
+            host = "dbos",
             user = "root" ,
             password = "redhat",
             database = "mydatabase"
@@ -57,7 +57,7 @@ def longurl():
     if request.method == 'POST':
         url = request.form.get('url')
         mydb = mysql.connector.connect(
-            host = "172.17.0.2",
+            host = "dbos",
             user = "root",
             password = "redhat",
             database = "mydatabase"
@@ -78,9 +78,9 @@ def longurl():
 @app.route('/<url>')
 def short_url(url):
     sno = str(base10(url))
-    originalurl = 'http://localhost:5000'
+    originalurl = 'NO URL FOUND'
     mydb = mysql.connector.connect(
-            host = "172.17.0.2",
+            host = "dbos",
             user = "root",
             password = "redhat",
             database = "mydatabase"
